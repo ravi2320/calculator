@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CUrrency Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script>
+    function CurrencyConvert() {
+        var cr1 = document.getElementById("curr1").defaultValue;
+        var cr2 = document.getElementById("curr2").value;
+        var currTo = document.getElementById("currTo").value;
+        var currFrom = document.getElementById("currFrom").value;
+
+        if (currTo <= 0 && currFrom <= 0) {
+            alert('Enter value is less than 0')
+        } else if ((currTo == 'RUPEES') && (currFrom == 'AFGHANI')) {
+            document.getElementById("curr2").value = parseFloat(cr1 / 0.95).toFixed(2);
+        } else if ((currTo == 'RUPEES') && (currFrom == 'BITCOIN')) {
+            document.getElementById("curr2").value = parseFloat(cr1 / 4280251.67).toFixed(2);
+        } else if ((currTo == 'RUPEES') && (currFrom == 'YUAN')) {
+            document.getElementById("curr2").value = parseFloat(cr1 / 11.44).toFixed(2);
+        } else if ((currTo == 'RUPEES') && (currFrom == 'EURO')) {
+            document.getElementById("curr2").value = parseFloat(cr1 / 89.06).toFixed(2);
+        } else if ((currTo == 'RUPEES') && (currFrom == 'DINAR')) {
+            document.getElementById("curr2").value = parseFloat(cr1 * 19.79).toFixed(2);
+        } else if ((currTo == 'RUPEES') && (currFrom == 'YEN')) {
+            document.getElementById("curr2").value = parseFloat(cr1 * 1.47).toFixed(2);
+        } else if ((currTo == 'RUPEES') && (currFrom == 'PESO')) {
+            document.getElementById("curr2").value = parseFloat(cr1 / 1.54).toFixed(2);
+        } else if ((currTo == 'RUPEES') && (currFrom == 'RUBBLE')) {
+            document.getElementById("curr2").value = parseFloat(cr1 * 1.02).toFixed(2);
+        } else if ((currTo == 'RUPEES') && (currFrom == 'RIYAL')) {
+            document.getElementById("curr2").value = parseFloat(cr1 / 19.76).toFixed(2);
+        } else if ((currTo == 'RUPEES') && (currFrom == 'RAND')) {
+            document.getElementById("curr2").value = parseFloat(cr1 / 5.11).toFixed(2);
+        } else if ((currTo == 'RUPEES') && (currFrom == 'WON')) {
+            document.getElementById("curr2").value = parseFloat(cr1 * 15.09).toFixed(2);
+        } else if ((currTo == 'RUPEES') && (currFrom == 'DOLLAR')) {
+            document.getElementById("curr2").value = parseFloat(cr1 / 74.10).toFixed(2);
+        }
+        e.preventDefault(
+
+        )
+    }
+</script>
+
+<body>
+    <h1>Currency Converter</h1>
+    <marquee>WELCOME TO THE ONLINE CURRENCY CONVERTER</marquee>
+    <br><br>
+    <form action="" class="converter">
+        <fieldset>
+            <label><center> INDIAN CURRENCY CONVERTER </center></label>
+            <br><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <select name="Currency1" id="currTo" onchange="CurrencyConvert()">
+                <option value="Select">Select</option>
+                <option value="AFGHANI">AFGHAN AFGHANI</option>
+                <option value="BITCOIN">BITCOIN</option>
+                <option value="YUAN">CHIENESE YUAN</option>
+                <option value="EURO">EURO</option>
+                <option value="RUPEES">INDIAN RUPEES</option>
+                <option value="DINAR">IRAQI DINAR</option>
+                <option value="YEN">JAPANESE YEN</option>
+                <option value="PESO">PHILIPPINE PESO</option>
+                <option value="RUBBLE">RUSSIAN RUBBLE</option>
+                <option value="RIYAL">SAUDI RIYAL</option>
+                <option value="RAND">SOUTH AFRICAN RAND</option>
+                <option value="WON">SOUTH KOREAN WON</option>
+                <option value="DOLLAR">UNITED STATE DOLLAR</option>
+            </select> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="number" id="curr1" onchange="CurrencyConvert()" value="1" required>
+            <br><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <select name="Currency2" id="currFrom" onchange="CurrencyConvert()">
+                <option value="Select">Select</option>
+                <option value="AFGHANI">AFGHAN AFGHANI</option>
+                <option value="BITCOIN">BITCOIN</option>
+                <option value="YUAN">CHIENESE YUAN</option>
+                <option value="EURO">EURO</option>
+                <option value="RUPEES">INDIAN RUPEES</option>
+                <option value="DINAR">IRAQI DINAR</option>
+                <option value="YEN">JAPANESE YEN</option>
+                <option value="PESO">PHILIPPINE PESO</option>
+                <option value="RUBBLE">RUSSIAN RUBBLE</option>
+                <option value="RIYAL">SAUDI RIYAL</option>
+                <option value="RAND">SOUTH AFRICAN RAND</option>
+                <option value="WON">SOUTH KOREAN WON</option>
+                <option value="DOLLAR">UNITED STATE DOLLAR</option>
+            </select> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="number" id="curr2" onchange="CurrencyConver()" required>
+        </fieldset>
+    </form>
+</body>
+
+</html>
